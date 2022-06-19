@@ -5,5 +5,14 @@
  * @returns {string[]}
  */
 export function sortStrings(arr, param = 'asc') {
-
+    const arrCopy = [...arr]
+    arrCopy.sort((value1, value2) => {
+        return value2.localeCompare(value1, {}, {sensitivity: 'base', caseFirst: 'upper'})
+    })
+    if(param === 'asc') {
+        arrCopy.sort((value1, value2) => {
+            return value2.localeCompare(value1, {}, {sensitivity: 'base', caseFirst: 'upper'})
+        }).reverse()
+    }
+    return arrCopy
 }
