@@ -10,9 +10,7 @@ export function sortStrings(arr, param = 'asc') {
         return value2.localeCompare(value1, {}, {sensitivity: 'base', caseFirst: 'upper'})
     })
     if(param === 'asc') {
-        arrCopy.sort((value1, value2) => {
-            return value2.localeCompare(value1, {}, {sensitivity: 'base', caseFirst: 'upper'})
-        }).reverse()
+        arrCopy.reverse()
     }
     return arrCopy
 }
