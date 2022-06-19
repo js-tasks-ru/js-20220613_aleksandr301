@@ -7,7 +7,7 @@
 export function sortStrings(arr, param = 'asc') {
     const arrCopy = [...arr]
     arrCopy.sort((value1, value2) => {
-        return value2.localeCompare(value1, {}, {sensitivity: 'base', caseFirst: 'upper'})
+        return value2.localeCompare(value1, ["ru", "en"], {caseFirst: 'upper'})
     })
     if(param === 'asc') {
         arrCopy.reverse()
