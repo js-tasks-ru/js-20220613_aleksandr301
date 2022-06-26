@@ -5,9 +5,9 @@
  * @returns {object} - returns the new object
  */
 export const omit = (obj, ...fields) => {
-    const object_ = {}
+    const newObject = {}
     Object.keys(obj).forEach(key => {
-        if (fields.indexOf(key) === -1) object_[key] = obj[key]
+        if (fields.indexOf(key) === -1) newObject[key] = obj[key]
     })
-    return object_
+    return newObject
 };
